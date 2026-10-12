@@ -1,0 +1,6 @@
+{
+  "name": "MitraNet WiFi Billing & E-Invoicing",
+  "description": "Sistem penagihan e-billing wifi, cetak invoice otomatis (Thermal & A4), notifikasi WhatsApp pelanggan, dan pencatatan pembayaran.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

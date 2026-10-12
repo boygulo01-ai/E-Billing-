@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+}
+
+/* Print Specific Rules for Automatic Invoicing */
+@media print {
+  /* Hide all non-printable UI */
+  body {
+    background: #ffffff !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  /* Make only the printable area visible */
+  #printable-invoice-container,
+  #printable-invoice-container * {
+    visibility: visible;
+  }
+
+  #printable-invoice-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    box-shadow: none !important;
+    border: none !important;
+    overflow: visible !important;
+  }
+
+  .no-print,
+  .no-print * {
+    display: none !important;
+  }
+
+  @page {
+    margin: 10mm;
+    size: auto;
+  }
+}
+
+/* Custom scrollbars for high-density tables */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
